@@ -2,4 +2,4 @@
 
 A set of extensions to add flash message feature to ASP.NET Core projects.
 
-[How to use](DerombaB.AspNetCoreExtensions.FlashExtensions/README.md)
+[How to use](https://github.com/dbissari/AspNetCore.FlashExtensions/blob/develop/DerombaB.AspNetCore.FlashExtensions/README.md)
