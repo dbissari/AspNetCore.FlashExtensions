@@ -23,7 +23,7 @@ namespace DerombaB.AspNetCore.FlashExtensions.Tests.Mvc.ViewFeatures
 
             tempData.Put(key, @object);
 
-            Assert.Equal(1, tempData.Count);
+            Assert.True(tempData.Count.Equals(1));
             Assert.Equal(JsonSerializer.Serialize(@object), tempData[key]);
         }
 

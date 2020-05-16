@@ -14,7 +14,7 @@ namespace DerombaB.AspNetCore.FlashExtensions.Tests.Mvc
 
             var flashedResult = Assert.IsType<FlashedActionResult>(viewResult.WithSuccessFlash("title1", "body1"));
 
-            Assert.Equal(1, flashedResult.FlashMessages.Count);
+            Assert.True(flashedResult.FlashMessages.Count.Equals(1));
             Assert.Equal("success", flashedResult.FlashMessages.FirstOrDefault().Type);
             Assert.Equal("title1", flashedResult.FlashMessages.FirstOrDefault().Title);
             Assert.Equal("body1", flashedResult.FlashMessages.FirstOrDefault().Body);
@@ -27,7 +27,7 @@ namespace DerombaB.AspNetCore.FlashExtensions.Tests.Mvc
 
             var flashedResult = Assert.IsType<FlashedActionResult>(viewResult.WithInfoFlash("title2", "body2"));
 
-            Assert.Equal(1, flashedResult.FlashMessages.Count);
+            Assert.True(flashedResult.FlashMessages.Count.Equals(1));
             Assert.Equal("info", flashedResult.FlashMessages.FirstOrDefault().Type);
             Assert.Equal("title2", flashedResult.FlashMessages.FirstOrDefault().Title);
             Assert.Equal("body2", flashedResult.FlashMessages.FirstOrDefault().Body);
@@ -40,7 +40,7 @@ namespace DerombaB.AspNetCore.FlashExtensions.Tests.Mvc
 
             var flashedResult = Assert.IsType<FlashedActionResult>(viewResult.WithWarningFlash("title3", "body3"));
 
-            Assert.Equal(1, flashedResult.FlashMessages.Count);
+            Assert.True(flashedResult.FlashMessages.Count.Equals(1));
             Assert.Equal("warning", flashedResult.FlashMessages.FirstOrDefault().Type);
             Assert.Equal("title3", flashedResult.FlashMessages.FirstOrDefault().Title);
             Assert.Equal("body3", flashedResult.FlashMessages.FirstOrDefault().Body);
@@ -53,7 +53,7 @@ namespace DerombaB.AspNetCore.FlashExtensions.Tests.Mvc
 
             var flashedResult = Assert.IsType<FlashedActionResult>(viewResult.WithDangerFlash("title4", "body4"));
 
-            Assert.Equal(1, flashedResult.FlashMessages.Count);
+            Assert.True(flashedResult.FlashMessages.Count.Equals(1));
             Assert.Equal("danger", flashedResult.FlashMessages.FirstOrDefault().Type);
             Assert.Equal("title4", flashedResult.FlashMessages.FirstOrDefault().Title);
             Assert.Equal("body4", flashedResult.FlashMessages.FirstOrDefault().Body);
@@ -68,7 +68,7 @@ namespace DerombaB.AspNetCore.FlashExtensions.Tests.Mvc
 
             var flashedResult = Assert.IsType<FlashedActionResult>(viewResult.WithFlash(type, "title5", "body5"));
 
-            Assert.Equal(1, flashedResult.FlashMessages.Count);
+            Assert.True(flashedResult.FlashMessages.Count.Equals(1));
             Assert.Equal(type, flashedResult.FlashMessages.FirstOrDefault().Type);
             Assert.Equal("title5", flashedResult.FlashMessages.FirstOrDefault().Title);
             Assert.Equal("body5", flashedResult.FlashMessages.FirstOrDefault().Body);
@@ -88,7 +88,7 @@ namespace DerombaB.AspNetCore.FlashExtensions.Tests.Mvc
 
             Assert.IsType<FlashedActionResult>(flashedResult);
 
-            Assert.Equal(5, flashedResult.FlashMessages.Count);
+            Assert.True(flashedResult.FlashMessages.Count.Equals(5));
         }
     }
 }
