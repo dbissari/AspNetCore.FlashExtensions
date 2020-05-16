@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>library</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>DerombaB.AspNetCore.FlashExtensions</PackageId>
+    <Version>1.0.0</Version>
+    <PackageTags>AspNetCore;Flash Messages;ActionResult;Extensions;TempData</PackageTags>
+    <Authors>Déromba Serge Bissari</Authors>
+    <Product>FlashExtensions</Product>
+    <Description>
+      A set of extensions to add flash message feature to ASP.NET Core projects.
+    </Description>
+    <PackageReleaseNotes>
+      First release of the project.
+      - Flash message class
+      - Custom Action Result (Flashed Action Result) with contains and manages a collection of flash messages objects
+      - Extension of IActionResult which creates a FlashExtensions
+    </PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/dbissari/AspNetCore.FlashExtensions.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryBranch>master</RepositoryBranch>
+    <NoWarn>1591,CS0659</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="README.md" Pack="true" PackagePath ="/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+
+</Project>
